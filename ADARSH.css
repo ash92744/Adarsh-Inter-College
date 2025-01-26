@@ -1,0 +1,930 @@
+@import url(https://fonts.google.com/specimen/Poppins?query=poppins);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'poppins', sans-serif;
+}
+
+/* GLOBAL TAGS */
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #101C32;
+}
+
+span {
+    font-size: .9rem;
+    color: #757373;
+}
+
+h6 {
+    font-size: 1.1rem;
+    color: #101C32;
+}
+
+/* HOME PAGE */
+.navTop{
+    margin-left: 15px;
+    margin-top: 15px;
+}
+.hd{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav {
+    position: fixed;
+    width: 98%;
+    background-color: #101C32;
+    border: 1px solid #fff;
+    border-radius: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0vw 2vw;
+    align-items: center;
+    box-shadow: 5px 5px 10px rgba(110, 110, 110, 110.15);
+}
+
+nav .navigation {
+    display: flex;
+}
+
+#menu-btn {
+    width: 20px;
+    height: 20px;
+    display: none;
+}
+
+#menu-close {
+    display: none;
+}
+
+nav img {
+    width: 50px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+nav .head{
+    color:#fff;
+}
+
+nav .navigation ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav .navigation ul li {
+    border-radius: 1px;
+    list-style: none;
+    margin-left: 30px;
+}
+
+nav .navigation ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+nav .navigation ul li a.active,
+nav .navigation ul li a:hover {
+    color: #FDC938;
+}
+
+/* HOME */
+#home {
+    background-image: url("/ADARSH/1699688488773.jpg");
+    width: 100%;
+    height: 30vh; /* Default height for smaller screens */
+    background-size: cover; /* Ensures the image fills the screen without cropping */
+    background-position: center; /* Keeps the image centered */
+    background-repeat: no-repeat; /* Prevents tiling of the image */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px; /* Adds padding for better spacing on smaller screens */
+}
+
+/* Styling for Heading */
+#home h2 {
+    color: white;
+    font-size: 2rem; /* Adjusted size for better responsiveness */
+    letter-spacing: 1px;
+    text-align: center;
+    margin-bottom: 10px; /* Adds spacing below the heading */
+}
+
+/* Styling for Paragraph */
+#home p {
+    width: 80%; /* Ensures the paragraph width is smaller on small screens */
+    color: white;
+    font-size: 1rem;
+    line-height: 1.5; /* Adjusts line spacing for better readability */
+    text-align: center;
+}
+
+/* Styling for Buttons */
+#home a {
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 10px 25px; /* Adjusts button size for smaller screens */
+    background-color: white;
+    font-weight: 600;
+    border-radius: 5px;
+    display: inline-block; /* Ensures buttons stack properly */
+    margin: 10px 5px; /* Adds spacing between buttons */
+}
+
+#home .btn {
+    margin-top: 20px; /* Reduced margin for smaller screens */
+}
+
+/* Blue Button */
+#home a.blue {
+    color: white;
+    background-color: #101C32;
+    transition: 0.3s ease;
+}
+
+#home a.blue:hover {
+    color: #101C32;
+    background-color: white;
+}
+
+/* Yellow Button */
+#home a.yellow {
+    color: white;
+    background-color: #FDC938;
+    transition: 0.3s ease;
+}
+
+#home a.yellow:hover {
+    color: #FDC938;
+    background-color: white;
+}
+
+/* Media Query for Larger Screens */
+@media screen and (min-width: 600px) {
+    #home {
+        height: 50vh; /* Increases height for larger screens */
+        padding-top: 70px; /* Adds more padding for larger devices */
+        /* padding-top: 200PX; */
+    }
+
+    #home h2 {
+        font-size: 3rem; /* Larger heading for larger screens */
+    }
+
+    #home p {
+        width: 60%; /* More space for text */
+        font-size: 1.2rem; /* Larger font size for readability */
+    }
+
+    #home a {
+        font-size: 1.1rem; /* Larger button font size */
+        padding: 15px 35px; /* Larger buttons for larger screens */
+    }
+}
+
+/* Media Query for Extra Large Screens */
+@media screen and (min-width: 4000px) {
+    #home {
+        height: 100vh; /* Makes the section taller on very large screens */
+        padding-top: 100px;
+    }
+
+    #home h2 {
+        font-size: 4rem; /* Extra large heading */
+    }
+
+    #home p {
+        width: 50%; /* Centered and narrower text */
+        font-size: 1.5rem; /* Even larger font for readability */
+    }
+}
+
+
+/* FEATURES */
+#features {
+    padding: 5vw 8vw 0 8vw;
+    text-align: center;
+    margin-right: 45px;
+}
+.fea{
+    padding: 20px 20px 20px 20px;
+}
+#features .fea-base {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 3rem;
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-left: 50px;
+}
+
+#features .fea-box {
+    background-color: #F9F9FF;
+    text-align: start;
+    border-radius: 10px;
+}
+
+#features .fea-box i {
+    font-size: 2.3rem;
+    color: rgb(44, 44, 80);
+}
+
+#features .fea-box h3 {
+    font-size: 1.2 rem;
+    font-weight: 600;
+    color: rgb(46, 46, 59);
+    padding: 13px 0 7px 0;
+}
+
+#features .fea-box p {
+    font-size: 1 rem;
+    font-weight: 400;
+    color: rgb(70, 70, 87);
+}
+
+/* PROFILES */
+.profiles{
+    border-radius: 10px;
+}
+.profiles img {
+    width: 150px;
+    border: 1px solid black;
+}
+
+#experts {
+    padding: 8vw 8vw 0 8vw;
+    text-align: center;
+}
+
+#experts .expert-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 1rem;
+    margin: 50px;
+}
+
+#experts .expert-box .profiles {
+    background-color: #F9F9FF;
+    padding: 30px 10px;
+}
+
+.pro-links {
+    margin-top: 10px;
+}
+.pro-links a {
+    text-decoration: none; /* Removes underline */
+    color: inherit; /* Ensures the link uses the current text color */
+}
+
+.pro-links i {
+    padding: 10px;
+    border: 1px solid #101C32;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.pro-links i:hover {
+    background-color: #101C32;
+    color: white;
+    border: 1px solid #101C32;
+}
+
+/* FOOTER */
+footer {
+    margin-top: 50px;
+    padding: 4vw;
+    background-color: #101C32;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.footer-col {
+    width: 500px;
+    margin-top: 30px;
+}
+
+footer h2 {
+    color: white;
+    padding-bottom: 20px;
+}
+
+footer h3 {
+    color: white;
+}
+
+footer .send {
+    margin-top: 20px;
+}
+
+footer input {
+    width: 220px;
+    padding: 15px 12px;
+    background: #334F6C;
+    border: none;
+    outline: none;
+    color: white;
+}
+
+footer .send a {
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 14px 15px;
+    background-color: white;
+    font-weight: 600;
+}
+
+footer a.yellow {
+    color: white;
+    background-color: #FDC938;
+    transition: 0.3s ease;
+}
+
+footer a.yellow:hover {
+    color: #FDC938;
+    background-color: white;
+}
+
+footer .copyright {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+footer .copyright .pro-links {
+    margin-top: 10px;
+}
+
+footer .copyright .pro-links i {
+    padding: 10px;
+    background-color: #5F7185;
+    border: 2px solid black;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+footer .copyright .pro-links i:hover {
+    background-color: #fff;
+    color: #101C32;
+    border: 1px solid black;
+}
+#vm{
+    color:white;
+}
+
+
+
+
+/* ABOUT PAGE */
+/* ABOUT DETAILS */
+#about-home {
+    margin-top: 0px;
+    background-image: url("/ADARSH/1699688488773.jpg");
+    width: 100%;
+    height: 30vh;
+    background-size: cover;  /* Adjust the background image to cover the area */
+    background-position: center; /* Keeps the image centered */
+    background-repeat: no-repeat;  /* Prevents tiling of the image */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Heading for #about-home */
+#about-home h2 {
+    color: white;
+    letter-spacing: 1px;
+    font-size: 2rem;
+}
+
+/* About container styles */
+#about-container {
+    display: flex;
+    align-items: center;
+    padding: 10vw; /* Adjust padding based on viewport width */
+    flex-wrap: wrap; /* Ensure elements wrap on smaller screens */
+}
+
+/* About image styles */
+.about-img {
+    width: 60%;
+    padding-right: 60px;
+}
+
+.about-img img {
+    width: 100%;
+    height: auto; /* Keep aspect ratio intact */
+}
+
+/* About text styles */
+.about-text {
+    width: 40%; /* Adjust width of text container */
+    /* margin-left: 45px;  */
+    /* margin-right: 45px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align text horizontally */
+    text-align: center; /* Center align text inside the container */
+}
+
+.about-text h2 {
+    color: #293038;
+    padding-bottom: 15px;
+}
+
+.about-text p {
+    color: #686F7A;
+    font-weight: 300;
+}
+
+/* About features styles */
+.about-fe {
+    padding-left: 10px;
+    margin-top: 20px;
+    display: flex;
+    align-items: flex-start;
+}
+
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+    #about-home {
+        height: 40vh; /* Increase height on smaller screens */
+    }
+
+    #about-home h2 {
+        font-size: 1.5rem; /* Reduce font size on smaller screens */
+    }
+
+    #about-container {
+        padding: 4vw; /* Adjust padding for smaller screens */
+        flex-direction: column; /* Stack elements vertically */
+        
+    }
+
+    .about-img {
+        width: 100%; /* Make image full width */
+        padding-right: 0;
+        margin-bottom: 20px; /* Add spacing below the image */
+    }
+
+    .about-text {
+        width: 100%; /* Make text container full width */
+    }
+
+    .about-fe {
+        justify-content: flex-start; /* Align features on the left */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #about-home {
+        height: 50vh; /* Further increase height on very small screens */
+    }
+
+    #about-home h2 {
+        font-size: 1.25rem; /* Reduce font size further for small screens */
+    }
+
+    #about-container {
+        padding: 6vw; /* Adjust padding for very small screens */
+        
+    }
+
+    .about-text h2 {
+        font-size: 1.5rem; /* Adjust font size for smaller screens */
+    }
+
+    .about-text p {
+        font-size: 1rem; /* Adjust font size of paragraph for small screens */
+    }
+}
+
+
+.fe-text {
+    margin: 10px;
+}
+
+
+/* CONTACT PAGE */
+#contact {
+    padding: 8vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* GETIN SECTION */
+.getin {
+    width: 100%; /* Ensure the "Get in" section spans full width */
+    margin-right: 20px;
+    text-align: center; /* Center the text inside this section */
+    margin-right: 50px;
+}
+.getin-details{
+    display:grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.d{
+    display:grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+#d{
+    display:grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#contact .getin h2 {
+    /* color: #2C234D; */
+    font-size: 30px;
+    font-weight: 800;
+    line-height: .8;
+    margin-bottom: 16px;
+}
+
+#contact .getin p {
+    color: #686875;
+    line-height: 24px;
+    margin-bottom: 33px;
+    padding-bottom: 25px;
+}
+
+#contact .getin h3 {
+    color: #2C234D;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 26px;
+    margin-bottom: 15px;
+}
+
+#contact .getin .getin-details div {
+    display: flex;
+}
+
+#contact .getin .getin-details div .get {
+    font-size: 16px;
+    line-height: 22px;
+    color: #5838FC;
+    margin-right: 20px;
+}
+
+#contact .getin .getin-details i {
+    margin-right: 10px;
+}
+
+
+/* CONTACT FORM */
+#contact .form {
+    width: 100%; /* Make the form span the full width */
+    max-width: 600px; /* Optional: Set a max width for better readability */
+    background-color: #F7F6FA;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+#contact .form h4 {
+    font-size: 24px;
+    color: #2C234D;
+    line-height: 30px;
+    margin-top: 8px;
+}
+
+#contact .form p {
+    color: #686875;
+    line-height: 24px;
+    padding-bottom: 25px;
+}
+
+#contact .form .form-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#contact .form .form-row input {
+    width: 48%;
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 3px;
+    border: none;
+    background: #fff;
+    color: #7E7C87;
+    outline: none;
+    padding: 20px 30px;
+    margin-bottom: 20px;
+}
+
+#contact .form .form-col input {
+    width: 100%;
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 3px;
+    border: none;
+    background: #fff;
+    color: #7E7C87;
+    outline: none;
+    padding: 20px 30px;
+    margin-bottom: 20px;
+}
+
+#contact .form .form-col textarea {
+    width: 100%;
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 3px;
+    border: none;
+    background: #fff;
+    color: #7E7C87;
+    outline: none;
+    padding: 20px 30px;
+    margin-bottom: 20px;
+}
+
+#contact .form button {
+    font-size: .9rem;
+    padding: 13px 25px;
+    background-color: #101C32;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    font-weight: 600;
+    color: white;
+}
+
+#contact .form button:hover {
+    background-color: white;
+    color: #101C32;
+    border: 2px solid #101C32;
+    cursor: pointer;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    /* Make the form and contact info stack vertically on smaller screens */
+    #contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center the contact section */
+    }
+
+    .form {
+        width: 90%; /* Allow the form to take up more width on small screens */
+        margin-top: 2rem;
+    }
+
+    /* Stack form inputs vertically on smaller screens */
+    .form-row {
+        flex-direction: column;
+    }
+
+    .form-row input {
+        width: 100%; /* Make inputs full-width on smaller screens */
+        margin-bottom: 10px;
+    }
+
+    /* Adjust the contact section for small screens */
+    .getin, .getin-details {
+        width: 100%; /* Make the contact info full-width */
+        text-align: center; /* Center text for small screens */
+        margin: 0 auto; /* Center it horizontally */
+    }
+
+    .form-col input,
+    .form-col textarea {
+        width: 100%; /* Make form fields full-width */
+    }
+
+    button {
+        width: 100%; /* Make button full-width on small screens */
+    }
+}
+
+
+/* MAP */
+#map {
+    width: 100%;
+    height: 50vh;
+}
+
+#map iframe {
+    width: 100%;
+    height: 100%;
+}
+
+/* RESPONSIVE */
+@media (max-width: 770px) {
+
+    /* HOME PAGE */
+    nav {
+        /* padding: 15px 20px; */
+        position: fixed;
+    width: 96%;
+    }
+
+    nav img {
+        width: 50px;
+    }
+
+    #menu-btn {
+        display: initial;
+    }
+
+    #menu-close {
+        display: initial;
+        font-size: 1.6rem;
+        color: white;
+        padding: 30px 0 20px 20px;
+    }
+
+    nav .navigation ul {
+        position: absolute;
+        top: 0;
+        margin-top: 55px;
+        right: -300px;
+        background-color: rgba(17, 20, 70, 0.45);
+        backdrop-filter: blur(4.5px);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        width: 220px;
+        height: 30vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        transition: 0.3s ease;
+    }
+
+    nav .navigation ul li {
+        padding: 20px 0 20px 40px;
+        margin-left: 0;
+    }
+
+    nav .navigation ul li a {
+        color: white;
+    }
+
+    nav .navigation ul.active {
+        right: 0;
+    }
+
+    #home {
+        padding-top: 0px;
+    }
+
+    #home p {
+        width: 90%;
+    }
+
+    #features {
+        padding: 8vw 4vw 0 4vw;
+    }
+
+    #experts {
+        padding: 8vw 8vw 4vw 8vw;
+        text-align: center;
+    }
+
+    /* ABOUT PAGE */
+    #about-container {
+        padding: 8vw 4vw 2vw 4vw;
+    }
+
+    .about-img {
+        padding-right: 30px;
+    }
+
+    /* CONTACT PAGE */
+    #contact {
+        padding: 8vw 4vw;
+    }
+}
+
+@media (max-width: 380px) {
+
+    /* HOME PAGE */
+    #home a {
+        font-size: 0.8rem;
+        padding: 12px 32px;
+    }
+
+    /* ABOUT PAGE */
+    #about-container {
+        flex-direction: column-reverse;
+        padding-right: 0px;
+    }
+
+    #about-container .about-img {
+        width: 100%;
+    }
+
+    #about-container .about-text {
+        width: 100%;
+        padding-bottom: 20px;
+    }
+
+    #about-container .about-text .align {
+        text-align: center;
+    }
+
+    /* CONTACT PAGE */
+    #contact {
+        padding: 8vw 4vw;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    #contact .getin {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    #contact .form {
+        width: 100%;
+        padding: 40px 30px;
+    }
+
+    #contact .form .form-row {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    #contact .form .form-row input {
+        width: 100%;
+    }
+}
+
+
+/* GALLERY */
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+/* Photo gallery section */
+#photo-gallery {
+    padding: 20px;
+    text-align: center;
+}
+
+#photo-gallery h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Gallery container */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive grid */
+    gap: 10PX; /* Remove spacing between images */
+    padding: 0; /* Remove padding */
+    margin: 0 auto; /* Center the gallery */
+}
+
+/* Images */
+.gallery img {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Force square dimensions */
+    object-fit: cover; /* Crop images to fill the square */
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+    box-shadow: 5px 5px 10px rgba(110, 110, 110, 110.15);
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}

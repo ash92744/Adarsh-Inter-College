@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADARSH INTER COLLEGE</title>
+    <link rel="stylesheet" href="ADARSH.css">
+
+    <script src="https://kit.fontawesome.com/2b05ff5e6f.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- NAVIGATION -->
+    <nav class="navTop">
+        <div class="hd">
+            <img src="/ADARSH/adarsh-logo.png" alt="">
+            <h6 class="head">ADARSH INTER COLLEGE</h6>
+        </div>
+        <div class="navigation">
+            <ul>
+                <i id="menu-close" class="fa-solid fa-circle-arrow-right"></i>
+                <li><a href="Home.html">Home</a></li>
+                <li><a class="active" href="About.html">About</a></li>
+                <li><a href="Gallery.html">Gallery</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+            <img id="menu-btn" src="/ADARSH/menu.png" alt="">
+        </div>
+    </nav>
+
+    <!-- HOME -->
+    <section id="about-home">
+        <h2>/ ABOUT ADARSH INTER COLLEGE /</h2>
+        </div>
+    </section>
+
+    <!-- ABOUT DETAILS -->
+    <section id="about-container">
+        <div class="about-img"><img src="/ADARSH/adarsh-logo.png" alt=""></div>
+        <div class="about-text">
+            <h2 class="align">Welcome to Adarsh Inter College<br /> Building Excellence Together!</h2>
+            <p class="align">At Adarsh Inter College, we are dedicated to providing a holistic education that fosters
+                creativity, innovation, and critical thinking. Our institution is a blend of traditional values and
+                modern teaching practices, offering a nurturing environment where students can excel academically and
+                develop lifelong skills. Join us to explore new horizons and unlock your true potential</p>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="features">
+        <h1>About ADARSH</h1>
+        <div class="fea-base">
+            <div class="fea-box">
+                <div class="fea">
+                    <i class="fa-solid fa-book"></i>
+                    <h3>English/Hindi Both patterns</h3>
+                    <p>Our campus is equipped with modern classrooms, laboratories and library. We ensure that students
+                        have access to the resources they
+                        need to explore, innovate, and excel. Experience an environment where education meets excellence
+                        and innovation
+                    </p>
+                </div>
+            </div>
+            <div class="fea-box">
+                <div class="fea">
+                    <i class="fa-solid fa-handshake"></i>
+                    <h3>20+ Years of trust</h3>
+                    <p>With over two decades of academic excellence, Adarsh Inter College has been a beacon of trust and
+                        reliability. Our alumni have gone on to achieve remarkable success, making us a trusted name in
+                        the education sector</p>
+                </div>
+            </div>
+            <div class="fea-box">
+                <div class="fea">
+                    <i class="fa-solid fa-chalkboard-user"></i>
+                    <h3>Experienced Teachers</h3>
+                    <p>We take pride in offering dual-medium education in English and Hindi, ensuring students gain
+                        fluency and confidence in both languages. Our curriculum is tailored to suit diverse learning
+                        needs while maintaining the highest educational standards</p>
+                </div>
+            </div>
+            <div class="fea-box">
+                <div class="fea">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <h3>STUDY FACILITIES</h3>
+                    <p>Our campus is equipped with modern classrooms, laboratories and library. We ensure that students
+                        have access to the resources they
+                        need to explore, innovate, and excel. Experience an environment where education meets excellence
+                        and innovation
+                    </p>
+                </div>
+            </div>
+            <div class="fea-box">
+                <div class="fea">
+                    <i class="fa-solid fa-award"></i>
+                    <h3>CERTIFICATIONS</h3>
+                    <p>Adarsh Inter College is proud to hold national and international accreditations, ensuring the
+                        highest
+                        standards in education. Our programs are designed to equip students with globally recognized
+                        skills
+                        and certifications that open doors to endless opportunities</p>
+                </div>
+            </div>
+            <div class="fea-box">
+                <div class="fea">
+                    <i class="fa-solid fa-trophy"></i>
+                    <h3>AWARD WINNINGS</h3>
+                    <p>Success is a tradition at Adarsh Inter College. With a legacy of academic and extracurricular
+                        excellence, our students and faculty have earned numerous awards and accolades. Join a community
+                        that celebrates innovation, creativity, and achievement at every step</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-col">
+            <h2>VISION AND MISSION</h2>
+            <p id="vm">At Adarsh Inter College, we strive to nurture a generation of responsible, knowledgeable, and
+                globally
+                aware individuals who embody the values of integrity, innovation, and excellence. Our mission is to
+                provide a holistic education that seamlessly blends academic rigor with moral values, fostering
+                intellectual curiosity, personal growth, and ethical character. Through dynamic teaching methodologies,
+                state-of-the-art infrastructure, and a supportive environment, we empower students to excel
+                academically, socially, and ethically, shaping a brighter future for themselves and society</p>
+        </div>
+        <div class="footer-col">
+            <h2>For Queries</h2>
+            <h3>Send a message for any doubt</h3>
+            <div class="send">
+                <input type="text" id="message" placeholder="Write message here">
+                <a href="#" class="yellow" onclick="sendMail()">Send</a>
+            </div>
+        </div>
+
+        <script>
+            function sendMail() {
+                var message = document.getElementById('message').value;
+                var email = "yashwantchauhan4u@gmail.com"; // Replace with your email
+                var subject = "AIC-Query"; // Replace with your desired subject
+                var body = encodeURIComponent(message); // Encode the message to handle special characters
+
+                // Check if required fields are filled
+                if (!message) {
+                    alert("Please fill out a Message.");
+                    return;
+                }
+
+                // Construct Gmail compose URL
+                var gmailUrl = "https://mail.google.com/mail/?view=cm&fs=1&to=" + email + "&su=" + encodeURIComponent(subject) + "&body=" + body;
+
+                window.open(gmailUrl, "_blank"); // Open Gmail in a new tab
+            }
+        </script>
+
+
+
+        <div class="copyright">
+            <p>© 2024 Adarsh. All Rights Reserved by Arsh Chaudhary. | Terms of
+                Service | Privacy Policy</p>
+            <div class="pro-links">
+                <a href="https://www.facebook.com/YOUR_PROFILE" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/aic_adarsh_inter_college/" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/YOUR_PROFILE" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- RESPONSIVE MENU -->
+    <script>
+        $('#menu-btn').click(function () {
+            $('nav .navigation ul').addClass('active')
+        });
+        $('#menu-close').click(function () {
+            $('nav .navigation ul').removeClass('active')
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADARSH INTER COLLEGE</title>
+    <link rel="stylesheet" href="ADARSH.css">
+
+    <script src="https://kit.fontawesome.com/2b05ff5e6f.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- NAVIGATION -->
+    <nav class="navTop">
+        <div class="hd">
+            <img src="/ADARSH/adarsh-logo.png" alt="">
+            <h6 class="head">ADARSH INTER COLLEGE</h6>
+        </div>
+        <div class="navigation">
+            <ul>
+                <i id="menu-close" class="fa-solid fa-circle-arrow-right"></i>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Gallery.html">Gallery</a></li>
+                <li><a class="active" href="Contact.html">Contact</a></li>
+            </ul>
+            <img id="menu-btn" src="/ADARSH/menu.png" alt="">
+        </div>
+    </nav>
+
+    <!-- HOME -->
+    <section id="about-home">
+        <h2>/ Contact Adarsh Inter College /</h2>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <section class="getin">
+            <div class="getin-details">
+                <h3><i class="fa-solid fa-house get"></i>Address</h3>
+                <div class="d">
+                    <p>362, Anoop Nagar, Fazalpur,Rohta Road, Meerut, Uttar Pradesh 250001</p>
+                </div>
+                <h3><i class="fa-solid fa-phone get"></i>Phone</h3>
+                <div class="d">
+
+                    <p>+91 9012077888<br>+91 8410003700</p>
+                </div>
+                <h3><i class="fa-solid fa-envelope get"></i>Email</h3>
+                <div class="d">
+                    <p>savitaadarsh24@gmail.com<br />yashwantchauhan4u@gmail.com</p>
+                </div>
+                <h3>Follow us</h3>
+                <div id="d" class="pro-links">
+                    <a href="https://www.facebook.com/YOUR_PROFILE" target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/aic_adarsh_inter_college/" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/YOUR_PROFILE" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <div class="form">
+            <h4>Let's Connect</h4>
+            <p>Send a message about any Query</p>
+            <div class="form-row">
+                <input type="text" id="userName" placeholder="Your Name">
+                <input type="text" id="userEmail" placeholder="Email">
+            </div>
+            <div class="form-col">
+                <input type="text" id="userSubject" placeholder="Subject">
+            </div>
+            <div class="form-col">
+                <textarea id="userMessage" cols="30" rows="8" placeholder="How can we help you?"></textarea>
+            </div>
+            <div class="form-col">
+                <button onclick="sendFormMail()">Send Message</button>
+            </div>
+        </div>
+
+        <script>
+            function sendFormMail() {
+                var name = document.getElementById('userName').value;
+                var email = document.getElementById('userEmail').value;
+                var subject = document.getElementById('userSubject').value || "No Subject"; // Default to "No Subject" if empty
+                var message = document.getElementById('userMessage').value;
+
+                // Check if required fields are filled
+                if (!name || !email || !message) {
+                    alert("Please fill out all required fields (Name, Email, Message).");
+                    return;
+                }
+
+                // Email to send to
+                var recipientEmail = "yashwantchauhan4u@gmail.com";
+
+                // Construct email body with all the details
+                var emailBody = "[ Name: " + name + " ]  " +
+                    "  [ Email: " + email + " ]  " +
+                    "  [ Message:" + message + " ]";
+
+                // Construct Gmail compose URL
+                var gmailUrl = "https://mail.google.com/mail/?view=cm&fs=1&to=" + recipientEmail +
+                    "&su=" + encodeURIComponent(subject) +
+                    "&body=" + encodeURIComponent(emailBody);
+
+                // Open Gmail compose window
+                window.open(gmailUrl, "_blank");
+            }
+        </script>
+
+    </section>
+    <section id="map">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3489.8896706380137!2d77.67042749999997!3d28.990640200000012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390c66156a555555%3A0x9f958f1ef8661ccc!2sAdarsh%20Inter%20College!5e0!3m2!1sen!2sin!4v1700031365618!5m2!1sen!2sin"
+            style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-col">
+            <h2>VISION AND MISSION</h2>
+            <p id="vm">At Adarsh Inter College, we strive to nurture a generation of responsible, knowledgeable, and
+                globally
+                aware individuals who embody the values of integrity, innovation, and excellence. Our mission is to
+                provide a holistic education that seamlessly blends academic rigor with moral values, fostering
+                intellectual curiosity, personal growth, and ethical character. Through dynamic teaching methodologies,
+                state-of-the-art infrastructure, and a supportive environment, we empower students to excel
+                academically, socially, and ethically, shaping a brighter future for themselves and society</p>
+        </div>
+        <div class="footer-col">
+            <h2>For Queries</h2>
+            <h3>Send a message for any doubt</h3>
+            <div class="send">
+                <input type="text" id="message" placeholder="Write message here">
+                <a href="#" class="yellow" onclick="sendMail()">Send</a>
+            </div>
+        </div>
+
+        <script>
+            function sendMail() {
+                var message = document.getElementById('message').value;
+                var email = "yashwantchauhan4u@gmail.com"; // Replace with your email
+                var subject = "AIC-Query"; // Replace with your desired subject
+                var body = encodeURIComponent(message); // Encode the message to handle special characters
+
+                // Check if required fields are filled
+                if (!message) {
+                    alert("Please fill out a Message.");
+                    return;
+                }
+                // Construct Gmail compose URL
+                var gmailUrl = "https://mail.google.com/mail/?view=cm&fs=1&to=" + email + "&su=" + encodeURIComponent(subject) + "&body=" + body;
+
+                window.open(gmailUrl, "_blank"); // Open Gmail in a new tab
+            }
+        </script>
+
+
+
+        <div class="copyright">
+            <p>© 2024 Adarsh. All Rights Reserved by Arsh Chaudhary. | Terms of
+                Service | Privacy Policy</p>
+            <div class="pro-links">
+                <a href="https://www.facebook.com/YOUR_PROFILE" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/aic_adarsh_inter_college/" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/YOUR_PROFILE" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- RESPONSIVE MENU -->
+    <script>
+        $('#menu-btn').click(function () {
+            $('nav .navigation ul').addClass('active')
+        });
+        $('#menu-close').click(function () {
+            $('nav .navigation ul').removeClass('active')
+        });
+    </script>
+</body>
+
+</html>
