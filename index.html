@@ -27,13 +27,15 @@
                 <li><a href="Gallery.html">Gallery</a></li>
                 <li><a href="Contact.html">Contact</a></li>
             </ul>
-            <img id="menu-btn" src="/ADARSH/menu.png" alt="">
+            <img id="menu-btn" src="menu.png" alt="">
         </div>
     </nav>
 
     <!-- HOME -->
     <section id="home">
         <h2>WORK IS WORSHIP</h2>
+    </section>
+    <section id="h">
         <p>At Adarsh Inter College, we believe education is the foundation for a brighter tomorrow. Our mission is to
             inspire, nurture, and empower students to achieve excellence and contribute to society. With
             state-of-the-art facilities and a supportive learning environment, we are committed to shaping future
@@ -124,7 +126,8 @@
     <footer>
         <div class="footer-col">
             <h2>VISION AND MISSION</h2>
-            <p id="vm">At Adarsh Inter College, we strive to nurture a generation of responsible, knowledgeable, and globally
+            <p id="vm">At Adarsh Inter College, we strive to nurture a generation of responsible, knowledgeable, and
+                globally
                 aware individuals who embody the values of integrity, innovation, and excellence. Our mission is to
                 provide a holistic education that seamlessly blends academic rigor with moral values, fostering
                 intellectual curiosity, personal growth, and ethical character. Through dynamic teaching methodologies,
@@ -139,29 +142,29 @@
                 <a href="#" class="yellow" onclick="sendMail()">Send</a>
             </div>
         </div>
-        
+
         <script>
-        function sendMail() {
-            var message = document.getElementById('message').value;
-            var email = "yashwantchauhan4u@gmail.com"; // Replace with your email
-            var subject = "AIC-Query"; // Replace with your desired subject
-            var body = encodeURIComponent(message); // Encode the message to handle special characters
-        
-            // Check if required fields are filled
-            if (!message) {
+            function sendMail() {
+                var message = document.getElementById('message').value;
+                var email = "yashwantchauhan4u@gmail.com"; // Replace with your email
+                var subject = "AIC-Query"; // Replace with your desired subject
+                var body = encodeURIComponent(message); // Encode the message to handle special characters
+
+                // Check if required fields are filled
+                if (!message) {
                     alert("Please fill out a Message.");
                     return;
                 }
-                
-            // Construct Gmail compose URL
-            var gmailUrl = "https://mail.google.com/mail/?view=cm&fs=1&to=" + email + "&su=" + encodeURIComponent(subject) + "&body=" + body;
-        
-            window.open(gmailUrl, "_blank"); // Open Gmail in a new tab
-        }
+
+                // Construct Gmail compose URL
+                var gmailUrl = "https://mail.google.com/mail/?view=cm&fs=1&to=" + email + "&su=" + encodeURIComponent(subject) + "&body=" + body;
+
+                window.open(gmailUrl, "_blank"); // Open Gmail in a new tab
+            }
         </script>
-        
-        
-        
+
+
+
         <div class="copyright">
             <p>© 2024 Adarsh. All Rights Reserved by Arsh Chaudhary. | Terms of
                 Service | Privacy Policy</p>
